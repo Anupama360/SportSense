@@ -55,7 +55,7 @@ const Home = () => {
 
   // 🟢 Step 2: After user info, fetch questions
   const fetchQuestions = () => {
-    fetch("https://sportsense-backend.onrender.com/getQuestion")
+    fetch("https://sportsense.onrender.com/getQuestion")
       .then((response) => response.json())
       .then((data) => {
         setQuestions(data.questions);
@@ -140,7 +140,7 @@ const Home = () => {
       };
       console.log("🟩 Final Response JSON:", finalData);
 
-      const response = await fetch("https://sportsense-backend.onrender.com/predict", {
+      const response = await fetch("https://sportsense.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
